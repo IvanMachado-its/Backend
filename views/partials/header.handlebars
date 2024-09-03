@@ -1,0 +1,20 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products">Productos</a></li>
+            {{#if user}}
+                <li><a href="/profile">Perfil</a></li>
+                <li><a href="/cart">Carrito</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+            {{else}}
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+    {{#if user}}
+        <p>Bienvenido, {{this.name}}!</p>
+    {{/if}}
+</header>
